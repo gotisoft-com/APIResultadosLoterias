@@ -47,3 +47,7 @@ Este es un proyecto en Laravel 10 que implementa una API para gestionar informac
     php artisan queue:work
     php artisan schedule:work
    
+9. Configuración del cron para ejecutar el planificador de tareas:
+
+   ```bash
+    * * * * * cd /var/www/html/loteriaapi && php artisan schedule:run >> /dev/null 2>&1
