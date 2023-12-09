@@ -3,14 +3,14 @@
 namespace App\Domain\Lottery\Actions;
 
 use App\Contracts\Action;
-use App\Domain\LotteryResult\Models\LotteryResults;
+use App\Domain\Lottery\Models\Lottery;
 
 class ListLotteryAction implements Action
 {
     public static function execute(?array $data = null): array
     {
-        return LotteryResults::query()->groupBy('lottery')
-            ->pluck('lottery')
+        return Lottery::query()
+            ->get()
             ->toArray();
     }
 }

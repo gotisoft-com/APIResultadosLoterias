@@ -1,5 +1,6 @@
 <?php
 
+use App\Domain\Lottery\Controllers\Api\LotteryApiController;
 use App\Domain\LotteryResult\Controllers\Api\LotteryResultsApiController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 Route::resource('/results', LotteryResultsApiController::class)
     ->only(['index', 'show']);
+
+Route::resource('/lotteries', LotteryApiController::class)
+    ->only(['index']);

@@ -20,6 +20,7 @@ class LotteryResults extends Model
 
     protected $fillable = [
         'lottery',
+        'slug',
         'date',
         'result',
         'series',

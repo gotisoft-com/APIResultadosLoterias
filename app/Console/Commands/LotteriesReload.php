@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Domain\Lottery\Actions\CreateLotteryAction;
-use App\Domain\Lottery\Actions\ListLotteryAction;
+use App\Domain\Lottery\Actions\ListLotteryResultAction;
 use Illuminate\Console\Command;
 
 class LotteriesReload extends Command
@@ -16,7 +16,7 @@ class LotteriesReload extends Command
     {
         $this->info('Reloading lotteries...');
 
-        $lotteries = ListLotteryAction::execute();
+        $lotteries = ListLotteryResultAction::execute();
         $allLotteries = collect();
 
         foreach ($lotteries as $lottery) {

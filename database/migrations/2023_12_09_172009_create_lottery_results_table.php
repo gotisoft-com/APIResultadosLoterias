@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('lottery_results', function (Blueprint $table) {
             $table->id();
             $table->string('lottery');
+            $table->string('slug');
             $table->date('date');
             $table->string('result');
             $table->string('series');

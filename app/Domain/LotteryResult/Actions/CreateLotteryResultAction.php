@@ -5,6 +5,7 @@ namespace App\Domain\LotteryResult\Actions;
 use App\Contracts\Action;
 use App\Domain\LotteryResult\Models\LotteryResults;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class CreateLotteryResultAction implements Action
 {
@@ -22,6 +23,7 @@ class CreateLotteryResultAction implements Action
                 'result' => $data['result'],
                 'series' => $data['series'],
                 'finger_print' => $fingerPrint,
+                'slug' => Str::slug($data['lottery']),
             ]
         );
     }
