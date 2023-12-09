@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Lottery\Actions;
+namespace App\Domain\LotteryResult\Actions;
 
 use App\Contracts\Action;
 use Carbon\Carbon;
@@ -31,7 +31,7 @@ class ConsultResultLotteryAction implements Action
         $response = [];
 
         foreach ($results as $result) {
-            $response[] = CreateLotteryAction::execute([
+            $response[] = CreateLotteryResultAction::execute([
                 'lottery' => $result['loteria'],
                 'date' => $result['fecha'],
                 'result' => $result['resultados'],

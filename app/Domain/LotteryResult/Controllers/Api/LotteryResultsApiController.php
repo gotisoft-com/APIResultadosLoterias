@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domain\Lottery\Controllers\Api;
+namespace App\Domain\LotteryResult\Controllers\Api;
 
-use App\Domain\Lottery\Actions\ConsultResultLotteryAction;
+use App\Domain\LotteryResult\Actions\ConsultResultLotteryAction;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 use Illuminate\Contracts\Routing\ResponseFactory;

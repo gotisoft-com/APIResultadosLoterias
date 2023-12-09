@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Lottery\Models;
+namespace App\Domain\LotteryResult\Models;
 
 use App\Concerns\Traits\HasFingerPrint;
 use Illuminate\Database\Eloquent\Model;

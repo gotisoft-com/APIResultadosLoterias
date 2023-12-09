@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Lottery\Controllers\Api\LotteryResultsApiController;
+use App\Domain\LotteryResult\Controllers\Api\LotteryResultsApiController;
 use Illuminate\Support\Facades\Route;
 
 /*

@@ -3,25 +3,19 @@
 namespace App\Domain\Lottery\Actions;
 
 use App\Contracts\Action;
-use App\Domain\Lottery\Models\LotteryResults;
+use App\Domain\Lottery\Models\Lottery;
 use Illuminate\Database\Eloquent\Model;
 
 class CreateLotteryAction implements Action
 {
-    public static function execute(?array $data = null): Model|LotteryResults
+    public static function execute(?array $data = null): Lottery|Model
     {
-        $fingerPrint = LotteryResults::generateFingerPrint(implode(', ', $data));
-
-        return LotteryResults::query()->updateOrCreate(
+        return Lottery::query()->updateOrCreate(
             [
-                'finger_print' => $fingerPrint,
+                'name' => $data['name'],
             ],
             [
-                'lottery' => $data['lottery'],
-                'date' => $data['date'],
-                'result' => $data['result'],
-                'series' => $data['series'],
-                'finger_print' => $fingerPrint,
+                'name' => $data['name'],
             ]
         );
     }

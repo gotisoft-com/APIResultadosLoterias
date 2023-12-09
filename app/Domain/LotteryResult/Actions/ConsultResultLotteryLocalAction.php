@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Domain\Lottery\Actions;
+namespace App\Domain\LotteryResult\Actions;
 
 use App\Contracts\Action;
-use App\Domain\Lottery\Models\LotteryResults;
+use App\Domain\LotteryResult\Models\LotteryResults;
 
 class ConsultResultLotteryLocalAction implements Action
 {
