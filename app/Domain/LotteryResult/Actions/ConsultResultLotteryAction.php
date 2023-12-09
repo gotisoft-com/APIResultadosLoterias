@@ -4,11 +4,12 @@ namespace App\Domain\LotteryResult\Actions;
 
 use App\Contracts\Action;
 use Carbon\Carbon;
+use Illuminate\Support\Collection;
 use Mlopez\Supergiros\Supergiros;
 
 class ConsultResultLotteryAction implements Action
 {
-    public static function execute(?array $data = null): array
+    public static function execute(?array $data = null): array|Collection
     {
         if (is_null($data)) {
             $data = [
@@ -26,17 +27,17 @@ class ConsultResultLotteryAction implements Action
         return self::saveRecord($results);
     }
 
-    private static function saveRecord(array $results): array
+    private static function saveRecord(array $results): array|Collection
     {
-        $response = [];
+        $response = collect();
 
         foreach ($results as $result) {
-            $response[] = CreateLotteryResultAction::execute([
+            $response->add(CreateLotteryResultAction::execute([
                 'lottery' => $result['loteria'],
                 'date' => $result['fecha'],
                 'result' => $result['resultados'],
                 'series' => $result['serie'],
-            ]);
+            ]));
         }
 
         return $response;
