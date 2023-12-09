@@ -14,17 +14,20 @@ class LotteryResultsApiController extends Controller
     {
         try {
             $results = ConsultResultLotteryAction::execute();
+
             return jsend_success($results);
         } catch (\Exception $e) {
             return jsend_error($e->getMessage());
         }
     }
+
     public function show(string $date): ResponseFactory|Response
     {
         try {
             $results = ConsultResultLotteryAction::execute([
-                'date' => Carbon::create($date)->format('Y-m-d')
+                'date' => Carbon::create($date)->format('Y-m-d'),
             ]);
+
             return jsend_success($results);
         } catch (\Exception $e) {
             return jsend_error($e->getMessage());

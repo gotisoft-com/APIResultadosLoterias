@@ -7,7 +7,6 @@ use App\Domain\Lottery\Models\LotteryResults;
 
 class ConsultResultLotteryLocalAction implements Action
 {
-
     public static function execute(?array $data = null): array
     {
         return LotteryResults::query()->whereDate('date', $data['date'])

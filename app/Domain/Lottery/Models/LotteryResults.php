@@ -5,7 +5,7 @@ namespace App\Domain\Lottery\Models;
 use App\Concerns\Traits\HasFingerPrint;
 use Illuminate\Database\Eloquent\Model;
 
-class LotteryResults extends  Model
+class LotteryResults extends Model
 {
     use HasFingerPrint;
 
