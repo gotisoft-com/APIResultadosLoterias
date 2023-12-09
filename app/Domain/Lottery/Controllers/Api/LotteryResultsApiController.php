@@ -6,7 +6,6 @@ use App\Domain\Lottery\Actions\ConsultResultLotteryAction;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 use Illuminate\Contracts\Routing\ResponseFactory;
-use Mlopez\Supergiros\Supergiros;
 use Symfony\Component\HttpFoundation\Response;
 
 class LotteryResultsApiController extends Controller

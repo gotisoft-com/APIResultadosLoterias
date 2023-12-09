@@ -17,6 +17,11 @@ class ConsultResultLotteryAction implements Action
             ];
         }
 
+        $results = ConsultResultLotteryLocalAction::execute($data);
+        if (count($results) > 0) {
+            return $results;
+        }
+
         $results = (new Supergiros())->call(Carbon::create($data['date'])->format('Y-m-d'));
         return self::saveRecord($results);
     }
