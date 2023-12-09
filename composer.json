@@ -50,6 +50,9 @@
         ],
         "pint": [
             "./vendor/bin/pint"
+        ],
+        "coverage": [
+            "php -dxdebug.mode=coverage vendor\\bin\\phpunit --coverage-html coverage"
         ]
     },
     "extra": {
