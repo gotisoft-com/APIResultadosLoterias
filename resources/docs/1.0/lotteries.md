@@ -12,6 +12,13 @@ Este endpoint devuelve la lista de loterías disponibles en la API, junto con su
 
 **Método HTTP:** `GET`
 
+**Uso:**
+Realiza una solicitud GET a este endpoint para obtener las loterías indexadas.
+
+```bash
+curl -X GET https://api-resultadosloterias.com/api/lotteries
+```
+
 **Ejemplo de Respuesta Exitosa:**
 ```json
 {

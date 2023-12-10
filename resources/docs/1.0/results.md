@@ -59,7 +59,7 @@ Este endpoint proporciona resultados de loterías para la fecha actual o para un
 Realiza una solicitud GET a este endpoint para obtener los resultados de todas las loterías para la fecha actual.
 
 ```bash
-curl -X GET https://tu-api.com/api/results
+curl -X GET https://api-resultadosloterias.com/api/results
 ```
 
 <a name="section-2"></a>
@@ -93,5 +93,5 @@ curl -X GET https://tu-api.com/api/results
 Realiza una solicitud GET a este endpoint con una fecha específica para obtener los resultados de todas las loterías para esa fecha.
 
 ```bash
-curl -X GET https://tu-api.com/api/results/2023-02-01
+curl -X GET https://api-resultadosloterias.com/api/results/2023-02-01
 ```
