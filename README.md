@@ -4,7 +4,7 @@ Este es un proyecto en Laravel 10 que implementa una API para gestionar informac
 
 ## Requisitos
 
-- PHP 8.3
+- PHP 8.2
 - Composer
 - [Laravel](https://laravel.com/) 10
 
