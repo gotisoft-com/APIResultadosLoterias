@@ -36,6 +36,12 @@ Este es un proyecto en Laravel 10 que implementa una API para gestionar informac
    ```bash
    php artisan migrate
    
+7. Permiso de escritura en el directorio `storage`:
+
+   ```bash
+   - chmod -R 755 bootstrap/cache
+   - chmod -R 755 storage
+   
 7. Inicia el servidor de desarrollo:
 
    ```bash
