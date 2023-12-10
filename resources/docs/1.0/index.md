@@ -1,0 +1,5 @@
+- ## Guía
+  - [Introducción](/{{route}}/{{version}}/introduction)
+  - [Loterías](/{{route}}/{{version}}/lotteries)
+  - [Resultados](/{{route}}/{{version}}/results)
+  - [Contribuye](/{{route}}/{{version}}/contribute)
