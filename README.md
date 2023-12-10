@@ -39,8 +39,8 @@ Este es un proyecto en Laravel 10 que implementa una API para gestionar informac
 7. Permiso de escritura en el directorio `storage`:
 
    ```bash
-   - chmod -R 755 bootstrap/cache
-   - chmod -R 755 storage
+   - chmod -R 775 bootstrap/cache
+   - chmod -R 775 storage
    
 7. Inicia el servidor de desarrollo:
 
