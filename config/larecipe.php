@@ -146,15 +146,15 @@ return [
     */
 
     'seo' => [
-        'author' => '',
-        'description' => '',
-        'keywords' => '',
+        'author' => 'Miguel López Ariza',
+        'description' => 'Bienvenido a API Resultados Loterías, tu destino digital para acceder de manera rápida y confiable a los resultados de diversas loterías en Colombia.',
+        'keywords' => 'api, loterías, laravel, php',
         'og' => [
-            'title' => '',
+            'title' => 'API Resultados Loterías',
             'type' => 'article',
-            'url' => '',
-            'image' => '',
-            'description' => '',
+            'url' => 'https://api-resultadosloterias.com/',
+            'image' => 'https://gotisoft.com/wp-content/uploads/2023/11/coete-min.png',
+            'description' => 'Bienvenido a API Resultados Loterías, tu destino digital para acceder de manera rápida y confiable a los resultados de diversas loterías en Colombia.',
         ],
     ],
 
