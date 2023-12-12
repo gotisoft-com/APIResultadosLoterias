@@ -13,7 +13,7 @@ class CreateLotteryAction implements Action
     {
         return Lottery::query()->updateOrCreate(
             [
-                'name' => $data['name'],
+                'slug' => Str::slug($data['name']),
             ],
             [
                 'name' => $data['name'],
