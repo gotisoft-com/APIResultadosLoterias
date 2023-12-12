@@ -5,6 +5,7 @@ namespace App\Domain\LotteryResult\Actions;
 use App\Contracts\Action;
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Log;
 use Mlopez\Supergiros\Supergiros;
 
 class ConsultResultLotteryAction implements Action
@@ -17,12 +18,16 @@ class ConsultResultLotteryAction implements Action
             ];
         }
 
-        $results = ConsultResultLotteryLocalAction::execute($data);
-        if (count($results) > 0) {
-            return $results;
+        if (!Carbon::create($data['date'])->isToday() && Carbon::create($data['date'])->isPast()) {
+            return ConsultResultLotteryLocalAction::execute($data);
         }
 
         $results = (new Supergiros())->call(Carbon::create($data['date'])->format('Y-m-d'));
+
+        Log::info('[LOTTERY] Consulta de resultados de lotería', [
+            'date' => $data['date'],
+            'results' => $results,
+        ]);
 
         return self::saveRecord($results);
     }

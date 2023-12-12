@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Domain\LotteryResult\Actions\ConsultResultLotteryAction;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Log;
 
 class LotteriesResultByDate extends Command
 {
@@ -18,6 +19,8 @@ class LotteriesResultByDate extends Command
 
         $date = Carbon::create($this->argument('date'))
             ->format('Y-m-d');
+
+        Log::info('[LOTTERY][JOB] Consulta de resultados de lotería ', ['date' => $date]);
 
         $results = ConsultResultLotteryAction::execute([
             'date' => $date,
