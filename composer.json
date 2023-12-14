@@ -6,7 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "binarytorch/larecipe": "^2.6",
+        "binarytorch/larecipe": "dev-master",
         "genealabs/laravel-model-caching": "^0.13.4",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
@@ -24,6 +24,12 @@
         "phpunit/phpunit": "^10.1",
         "spatie/laravel-ignition": "^2.0"
     },
+    "repositories": [
+        {
+            "type": "github",
+            "url": "https://github.com/parrotsoft/larecipe.git"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "App\\": "app/",
