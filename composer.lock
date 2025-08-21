@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d178d0d4dea6a8620135251e3b99a50e",
+    "content-hash": "2576f1192908134f687e0049b75dd4ff",
     "packages": [
         {
             "name": "binarytorch/larecipe",
@@ -2271,16 +2271,16 @@
         },
         {
             "name": "mlopez/supergiros",
-            "version": "v1.0.4",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/parrotsoft/supergiros.git",
-                "reference": "3e7744ea22d8ef42d76c973285b13fa0a9b6eceb"
+                "reference": "81c65b87f10dce26a17996f460608cfa50989294"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/parrotsoft/supergiros/zipball/3e7744ea22d8ef42d76c973285b13fa0a9b6eceb",
-                "reference": "3e7744ea22d8ef42d76c973285b13fa0a9b6eceb",
+                "url": "https://api.github.com/repos/parrotsoft/supergiros/zipball/81c65b87f10dce26a17996f460608cfa50989294",
+                "reference": "81c65b87f10dce26a17996f460608cfa50989294",
                 "shasum": ""
             },
             "require": {
@@ -2319,9 +2319,9 @@
             ],
             "support": {
                 "issues": "https://github.com/parrotsoft/supergiros/issues",
-                "source": "https://github.com/parrotsoft/supergiros/tree/v1.0.4"
+                "source": "https://github.com/parrotsoft/supergiros/tree/v1.0.5"
             },
-            "time": "2024-02-22T02:18:56+00:00"
+            "time": "2025-08-21T00:44:48+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -8674,6 +8674,6 @@
     "platform": {
         "php": "^8.2"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
