@@ -26,7 +26,7 @@ class ConsultResultLotteryAction implements Action
 
         Log::info('[LOTTERY] Consulta de resultados de lotería', [
             'date' => $data['date'],
-            'results' => $results,
+            'ip' => request()->ip(),
         ]);
 
         return self::saveRecord($results);
